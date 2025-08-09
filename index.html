@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pacheco Lawn Services offers professional landscaping and lawn care services in North Port, Florida. Contact us for tree trimming, planting, sod installation, and more.">
+  <meta name="keywords" content="lawn care, landscaping, tree trimming, sod installation, lawn services, North Port Florida, gardening, garden maintenance">
+  <title> 
+    Pacheco Lawn Services | Professional Landscaping</title>
+    <link rel="icon" href="/assets/pachecoLawnLogo.png" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-green: #4CAF50;
+      --dark-green: #388E3C;
+      --light-green: #C8E6C9;
+      --light-grey: #F8F9FA;
+    }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4fff4;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    /***fonts**/
+    .libertinus-sans-regular {
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libertinus-sans-bold {
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libertinus-sans-regular-italic {
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+    header {
+      background-color: var(--main-green);
+      position:fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1020; /* encima de otros elementos */
+      
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .section {
+      padding: 80px 0;
+    }
+    .pachecoLawnLogo
+    {
+      height: 80px;
+      margin-bottom: 20px;
+    }
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease;
+    }
+    .typewriter h1 {
+      display: inline-block;
+      overflow: hidden;
+      border-right: .15em solid orange;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .1em;
+      animation: typing 4s steps(30, end), blink-caret .75s step-end infinite;
+      font-size: 3rem;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange; }
+    }
+    @media (max-width: 600px) {
+      .typewriter h1 {
+        font-size: 1.8rem;
+      }
+      .typewriter p {
+        font-size: 1rem;
+      }
+    }
+    @media (min-width: 601px) {
+      body {
+        font-size: 1.1rem;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-size: larger;
+      }
+    }
+    .hero-section {
+      background: linear-gradient(to right, #4CAF50, #81C784);
+      color: white;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+        .text-hero {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      font-size: 3rem;
+    }
+    .hero-section .typewriter h1 {
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    .hero-btn {
+      margin-top: 20px;
+      padding: 10px 25px;
+      font-weight: bold;
+      background-color: white;
+      color: var(--main-green);
+      border: none;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+    .hero-btn:hover {
+      background-color: var(--dark-green);
+      color: white;
+    }
+    .highlight-text {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #2e7d32;
+      letter-spacing: 1.2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .before-after {
+      position: relative;
+      overflow: hidden;
+    }
+    .before-after img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      transition: opacity 1s ease-in-out;
+    }
+    .before-after:hover img:first-child {
+      opacity: 0;
+    }
+    /* galeria */
+    .gallery-img-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.gallery-img-container:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1; 
+
+
+}
+
+  .gallery-img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  display: block;
+}
+
+/* Contenedor padre con control de enfoque */
+.row:hover .gallery-img {
+  filter: blur(2px);
+  transform: scale(1);
+}
+
+/* Imagen enfocada */
+ .row:hover .gallery-img:hover {
+  filter: none;
+  transform: scale(1.6);
+  z-index: 2;
+  position: relative;
+}
+/* Título de la imagen (opcional) */
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar título al pasar el mouse */
+.gallery-img-container:hover .gallery-caption {
+  opacity: 1;
+}
+/*****************************************************************/
+       .carousel-wrapper {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      background: #f8f9fa;
+      padding: 20px 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 50s linear infinite;
+    }
+
+    .carousel-track img {
+      max-height: 200px;
+      width: 350px;
+      object-fit: cover;
+      margin: 0 15px;
+      transition: transform 0.4s ease;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .carousel-track video {
+      max-height: 200px;
+      width: 350px;
+      margin: 0 15px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    .carousel-track img:hover {
+      transform: scale(1.2);
+      z-index: 1;
+    }
+    .carousel-track video:hover {
+      transform: scale(1.2);
+      z-index: 1;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .carousel-track > * {
+      flex: 0 0 auto;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+
+  <header >
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand logo libertinus-sans-regular " href="#">
+              <img src="/assets/pachecoLawnLogo.png" alt="Pacheco Lawn Service logo" />
+          Pacheco Lawn Service LLC</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-success" tabindex="-1" id="offcanvasNavbar">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#gallery">Gallery</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero-section position-relative text-white d-flex justify-content-center align-items-center" style="height: 100vh; overflow: hidden;">
+   <!-- <img  src="/assets/clean-up.jpeg" class="position-absolute w-100 h-100 object-fit-cover" style="z-index: 1;"> -->
+    <video autoplay muted loop playsinline class="position-absolute w-100 h-100  object-fit-cover" style="z-index: 1;">
+    <source src="/assets/jardinAereo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video> 
+  <!-- <div class="text-center" style="z-index: 10;"> -->
+      <div class="container" style="z-index: 10;">
+        <div>
+        <p class="text-hero">Welcome</p>
+      </div>
+
+      <div class="typewriter">
+        <h1 class="animate__animated animate__fadeInDown libertinus-sans-bold ">
+          <!-- <i class="bi bi-tree-fill"></i> -->
+           Pacheco Lawn Service LLC</h1>
+      </div>
+      <p class="lead mt-3 animate__animated animate__fadeInUp">Your one-stop solution for all lawn care needs.</p>
+      <a href="#contact" class="btn hero-btn animate__animated animate__fadeInUp">Contact Us</a>
+    </div>
+</section>
+
+  
+
+  <!-- About Us -->
+  <section id="about" class="section" data-aos="fade-right">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center display-5 fw-semibold text-success-emphasis">
+            <i class="bi bi-info-circle-fill text-primary "></i> About Us</h2>
+        <p class="text-center ">At Pacheco Lawn Services, we combine skill, passion, and attention to detail to transform outdoor spaces into vibrant, healthy landscapes.</p>
+        <p class="text-center ">With years of experience in lawn care, we pride ourselves on delivering quality workmanship, personalized service, and lasting results.</p>
+        <p class="text-center ">Our dedicated team treats every lawn as if it were our own, ensuring your garden not only looks its best today but thrives for seasons to come.</p>         
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Mission, Vision, Values -->
+  <section id="mission-vision-values" class="section" style="background-color: #efe98f;" data-aos="fade-up">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <h3 class="display-6"><i class="bi bi-bullseye"></i> Mission</h3>
+          <p>To provide comprehensive gardening and landscaping services, offering customized solutions for tree pruning, planting, lawn installation, cleaning, and garden maintenance. Our commitment is to create harmonious, sustainable, and functional natural spaces that enhance the quality of life for our clients, with professional attention, punctuality, and respect for the environment.</p>
+        </div>
+        <div class="col-md-4">
+          <h3 class="display-6"><i class="bi bi-eye-fill"></i> Vision</h3>
+          <p>To become the leading gardening and landscaping company in the region, recognized for innovation in the design and care of green areas, excellence in service, and commitment to sustainability, creating natural environments that inspire well-being and connection with nature.</p>
+        </div>
+        <div class="col-md-4">
+          <h3 class="display-6"><i class="bi bi-star-fill"></i> Values</h3>
+          <ul class="text-start">
+            <li>Quality: We strive for excellence in every service we provide.</li>
+            <li>Integrity: We conduct our business with honesty and transparency.</li>
+            <li>Customer Focus: Our clients are at the heart of everything we do.</li>
+            <li>Sustainability: We are committed to environmentally friendly practices.</li>
+            <li>Innovation: We embrace new ideas and technologies to improve our services.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Services -->
+<section id="services" class="section" data-aos="zoom-in">
+  <div class="container text-center">
+    <h2 class="display-5 fw-semibold text-success-emphasis
+
+"><i class="bi bi-tools text-secondary"></i> Our Services</h2>
+    <p class="fst-italic fw-semibold " style="color: #2e7d32; font-size: 1.2rem; letter-spacing: 1px; text-shadow: 1px 1px 2px #ccc;">
+      Licensed and insured, commercial and residential services in north port Florida port charlotte Englewood Punta Gorda Venice.
+    </p>
+    <p>We offer a variety of lawn care services to keep your yard looking its best.</p>
+    <div class="row mt-4">
+      <div class="col-md-4 mb-4">
+        <h5><i class="bi bi-scissors"></i> Tree Trimming</h5>
+        <p>Careful trimming to improve safety, sunlight, and tree shape.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5><i class="bi bi-flower1"></i> Planting & Sod Installation</h5>
+        <p>Custom installation of plants and sod to bring your yard to life.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5><i class="bi bi-bucket-fill"></i> Yard Clean-Up</h5>
+        <p>Thorough cleaning of outdoor areas, leaves, and debris removal.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5><i class="bi bi-trash-fill"></i> Plant Removal</h5>
+        <p>Safe removal of unwanted or dead plants and small trees.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5><i class="bi bi-bricks"></i> Landscaping</h5>
+        <p>Creative and functional design to enhance your outdoor spaces.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5><i class="bi bi-patch-check"></i> Mowing</h5>
+        <p>Regular mowing services to keep your lawn even and healthy.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5><i class="bi bi-flower2"></i> Mulch</h5>
+        <p>Enhance soil health and beautify your garden with premium mulch installation.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5><i class="bi bi-gem"></i> Rock Installation</h5>
+        <p>Decorative rock placement for beautiful and low-maintenance areas.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5><i class="bi bi-plus-circle-fill"></i> More</h5>
+        <p>We offer a wide range of additional lawn and landscaping services tailored to your needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact -->
+<section id="contact" class="section " style="background-color: #efe98f;" data-aos="fade-left">
+  <div class="container text-center">
+    <h2 class="display-5 fw-semibold text-success-emphasis"><i class="bi bi-telephone-fill text-dark"></i> Contact Us</h2>
+    <p>For inquiries, please reach out to us through any of the following numbers:</p>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4 mb-3">
+        <h5><i class="bi bi-phone-fill"></i> English</h5>
+        <p><a href="tel:+9419935228">(941) 993 5228</a> </p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5><i class="bi bi-phone-fill"></i> English</h5>
+        <p><a href="tel:+9417803231">(941) 780 3231</a> </p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5><i class="bi bi-phone-fill"></i> Spanish</h5>
+        <p><a href="tel:+9419934930">(941) 993 4930</a> </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <div class="container animate__animated animate__fadeInUp">
+      <h2 class="text-center mb-4 display-5 fw-semibold text-success-emphasis"><i class="bi bi-images text-danger-emphasis"></i> Gallery</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+           <div class="gallery-img-container">
+             <img src="/assets/imageplant2.jpeg" class="gallery-img rounded shadow-sm">
+               <div class="gallery-caption">Planta 1</div>
+           </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="gallery-img-container">
+            <img src="/assets/imageplant3.jpeg" class="gallery-img rounded shadow-sm">
+            <div class="gallery-caption">Planta 2</div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="/assets/lawn repair.jpeg" class="gallery-img rounded shadow-sm">
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="/assets/imageplant4.jpeg" class="gallery-img rounded shadow-sm">
+        </div>
+                <div class="col-md-4 mb-4">
+          <img src="/assets/clean-up.jpeg" class="gallery-img rounded shadow-sm">
+        </div>
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="carousel-wrapper">
+    <div class="container-fluid">
+      <div class="carousel-track d-flex">
+        <!-- Repetimos imágenes 2 veces para efecto infinito -->
+        <video autoplay muted loop playsinline class="">
+            <source src="/assets/reparacion.mp4"  alt="lawn repair" type="video/mp4">
+              Your browser does not support the video tag.
+        </video>
+        <img  src="/assets/palmer.jpeg"  alt="Imagen 3">
+        <video autoplay muted loop playsinline class="">
+            <source src="/assets/video pasto.mp4"  alt="lawn repair" type="video/mp4">
+              Your browser does not support the video tag.
+        </video> 
+        <img src="/assets/lawn-pair.jpg" alt="Imagen 4">
+         <video autoplay muted loop playsinline class="">
+            <source src="/assets/pachecoLawn.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+        </video> 
+         <img src="/assets/down-trees-unsplash.jpg" alt="Imagen 4">
+        <video autoplay muted loop playsinline class="">
+            <source src="/assets/jardinAereo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+        </video> 
+        <video autoplay muted loop playsinline class="">
+            <source src="/assets/corte de cesped2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+        </video> 
+        <video autoplay muted loop playsinline class="">
+            <source src="/assets/cut-palmer.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+        </video> 
+        
+        <!-- Duplicadas -->
+        <video autoplay muted loop playsinline class="">
+            <source src="/assets/reparacion.mp4"  alt="lawn repair" type="video/mp4">
+              Your browser does not support the video tag.
+        </video>
+        <img  src="/assets/palmer.jpeg"  alt="Imagen 3">
+        <video autoplay muted loop playsinline class="">
+            <source src="/assets/video pasto.mp4"  alt="lawn repair" type="video/mp4">
+              Your browser does not support the video tag.
+        </video> 
+        <img src="/assets/lawn repair.jpeg" alt="Imagen 4">
+         <video autoplay muted loop playsinline class="">
+            <source src="/assets/pachecoLawn.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+        </video> 
+         <img src="/assets/down-trees-unsplash.jpg" alt="Imagen 4">
+        <video autoplay muted loop playsinline class="">
+            <source src="/assets/jardinAereo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+        </video> 
+        <video autoplay muted loop playsinline class="">
+            <source src="/assets/corte de cesped2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+        </video> 
+        <video autoplay muted loop playsinline class="">
+            <source src="/assets/cut-palmer.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+        </video> 
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="text-center p-4" style="background-color: var(--dark-green); color: white;">
+    &copy; 2025 Pacheco Lawn Service LLC. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
+    bsOffcanvas.hide();
+  </script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
