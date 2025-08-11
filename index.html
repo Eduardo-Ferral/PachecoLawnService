@@ -67,6 +67,9 @@
     .section {
       padding: 80px 0;
     }
+    .section-odd{
+      background-color: #efe98f
+    }
     .pachecoLawnLogo
     {
       height: 80px;
@@ -309,15 +312,17 @@
   <!-- Header -->
 
   <header >
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid d-flex">
-        <div class=" logo text-center">
-          <img class="" src="assets/pachecoLawnLogo.png" alt="Pacheco Lawn Service logo" />
-          <a class="navbar-brand logo libertinus-sans-regular " href="#">
+    <nav class="navbar flex-nowrap navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <div class=" logo text-center ">
+          <a href="#">
+            <img class="" src="assets/pachecoLawnLogo.png" alt="Pacheco Lawn Service logo" />
+          </a>
+          <a class="navbar-brand  logo libertinus-sans-regular " href="#">
           Pacheco Lawn Service LLC
-        </a>
+          </a>
         </div>
-        <button class="navbar-toggler text-end " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+        <button class="navbar-toggler p-1 " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end text-bg-success" tabindex="-1" id="offcanvasNavbar">
@@ -385,7 +390,7 @@
     </div>
   </section>
 <!-- Mission, Vision, Values -->
-  <section id="mission-vision-values" class="section" style="background-color: #efe98f;" data-aos="fade-up">
+  <section id="mission-vision-values" class="section section-odd"  data-aos="fade-up">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-4">
@@ -463,7 +468,7 @@
   </div>
 </section>
 <!-- Contact -->
-<section id="contact" class="section " style="background-color: #efe98f;" data-aos="fade-left">
+<section id="contact" class="section section-odd "  data-aos="fade-left">
   <div class="container text-center">
     <h2 class="display-5 fw-semibold text-success-emphasis"><i class="bi bi-telephone-fill text-dark"></i> Contact Us</h2>
     <p>For inquiries, please reach out to us through any of the following numbers:</p>
